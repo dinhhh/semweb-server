@@ -1,0 +1,206 @@
+@prefix owl: <https://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex: <http://semweb.edu.vn/example#> .
+
+ex:mobilePhone a owl:Class ;
+	owl:equivalentClass [
+		# restriction of mobile phone class
+		owl:intersectionOf (
+			[
+				a owl:Restriction ;
+				owl:onProperty ex:status ;
+				owl:allValuesFrom ex:phoneStatus
+			]
+			[
+				a owl:Restriction ;
+				owl:onProperty ex:displayType ;
+				owl:allValuesFrom ex:phoneDisplayType
+			]
+		)
+	] .
+
+# Lauch
+ex:publishDate a rdfs:Property ;
+	rdfs:subPropertyOf ex:date ;
+	rdfs:comment "Date when a work was first published or released" .
+
+ex:status a rdfs:Property ;
+	rdfs:comment "The property for status classes" ;
+	rdfs:domain rdf:Class ;
+	rdfs:range rdfs:Resource . # Dùng OWL để giới hạn các giá trị ex:status có thể nhận (owl:allValuesFrom)
+
+# Status classes
+ex:phoneStatus a rdfs:Class ;
+	rdfs:comment "The stage of a phone within its life cycle" ;
+	rdfs:subClassOf ex:status .
+
+ex:rumored a rdfs:Class ;
+	rdfs:comment "Not yet officially announced or even confirmed for market release yet" ;
+	rdfs:subClassOf ex:status .
+
+ex:commingSoon a rdfs:Class ;
+	rdfs:comment "Officially announced, but not yet available to buy in stores or online" ;
+	rdfs:subClassOf ex:status .
+
+ex:cancelled a rdfs:Class ;
+	rdfs:comment "Officially announced, then officially cancelled. Rarely happens" ;
+	rdfs:subClassOf ex:status .
+
+ex:available a rdfs:Class ;
+	rdfs:comment "In production, can be found new in stores and online" ;
+	rdfs:subClassOf ex:status .
+
+ex:discontinued a rdfs:Class ;
+	rdfs:comment "No longer in production, can usually be found pre-owned online" ;
+	rdfs:subClassOf ex:status .
+
+# Body
+ex:bodyDimensions a rdfs:Property ;
+	rdfs:subPropertyOf ex:dimentionSize ;
+	rdfs:comment "The size of the phone in format (H x L x W)" ;
+	rdfs:domain rdf:Class ;
+	rdfs:range rdf:Resource .
+
+ex:bodyWeight a rdfs:Property ;
+	rdfs:comment "The weight of the phone" ;
+	rdfs:domain rdf:Class ;
+	rdfs:range rdf:Resource .
+
+ex:bodyBuild a rdfs:Property ;
+	rdfs:comment "The construction materials, methods and finishes used by the manufacturer when building a phone" ;
+	rdfs:domain rdf:Class ;
+	rdfs:range rdf:Resource .
+
+# SIM
+ex:SIM a rdfs:Property ;
+	rdfs:comment "SIM cards store the required information to identify the mobile device. It also contains data required for voice encryption to make listening in on calls almost impossible" ;
+	rdfs:domain rdf:Class ;
+	rdfs:range rdf:SIMCard .
+
+# SIM card classes
+ex:SIMCard a rdfs:Class ;
+	rdfs:comment "The information of a SIM card" .
+ex:FULL-SIZE-SIM a rdfs:Class ;
+	rdfs:comment "A standard size of SIM card" ;
+	rdfs:subClassOf ex:SIMCard ;
+	rdfs:dimentionSize [
+		rdf:value "85.6 x 53.98 x 0.76" ;
+		ex:unit "mm"
+	] .
+ex:MINI-SIM a rdfs:Class ;
+	rdfs:comment "A standard size of SIM card" ;
+	rdfs:subClassOf ex:SIMCard ;
+	rdfs:dimentionSize [
+		rdf:value "25 x 15 x 0.76" ;
+		ex:unit "mm"
+	] .
+ex:MICRO-SIM a rdfs:Class ;
+	rdfs:comment "A standard size of SIM card" ;
+	rdfs:subClassOf ex:SIMCard ;
+	rdfs:dimentionSize [
+		rdf:value "15 x 12 x 0.76" ;
+		ex:unit "mm"
+	] .
+ex:NANO-SIM a rdfs:Class ;
+	rdfs:comment "A standard size of SIM card" ;
+	rdfs:subClassOf ex:SIMCard ;
+	rdfs:dimentionSize [
+		rdf:value "12.3 x 8.8 x 0.67" ;
+		ex:unit "mm"
+	] .
+ex:E-SIM a rdfs:Class ;
+	rdfs:comment "A non removable SIM card" ;
+	rdfs:subClassOf ex:SIMCard ;
+	rdfs:dimentionSize [
+		rdf:value "6 x 5 x 1" ;
+		ex:unit "mm"
+	] .
+
+# Display
+ex:displayType a rdfs:Property ;
+	rdfs:comment "The property for display type classes" ;
+	rdfs:domain rdf:Class ;
+	rdfs:range rdf:phoneDisplayType .
+
+ex:displaySize a rdfs:Property ;
+	rdfs:comment "The size of phone screen in inch" ;
+	rdfs:domain rdf:Class ;
+	rdfs:range rdf:Resource .
+
+ex:displayResolution a rdfs:Property ;
+	rdfs:comment "The number of pixels on a display" ;
+	rdfs:domain rdf:Class ;
+	rdfs:range rdf:Resource .
+
+ex:displayProtection a rdfs:Property ;
+	rdfs:comment "The technology that need for enhanced scratch resistance and protection of the screens" ;
+	rdfs:domain rdf:Class ;
+	rdfs:range rdf:Resource .
+
+# Display type classes
+ex:phoneDisplayType a rdfs:Class ;
+	rdfs:comment "The type of phone screen" .
+
+ex:LCD a rdfs:Class ;
+	rdfs:comment "A display type" ;
+	rdfs:subClassOf ex:phoneDisplayType .
+
+ex:IPS-LCD a rdfs:Class ;
+	rdfs:comment "A display type" ;
+	rdfs:subClassOf ex:phoneDisplayType .
+
+ex:OLED a rdfs:Class ;
+	rdfs:comment "A display type" ;
+	rdfs:subClassOf ex:phoneDisplayType .
+
+ex:AMOLED a rdfs:Class ;
+	rdfs:comment "A display type" ;
+	rdfs:subClassOf ex:phoneDisplayType .
+
+# Platform information
+ex:operatingSystem a rdfs:Property ;
+	rdfs:comment "A base infrastructure software component of a computerized system" ;
+	rdfs:domain rdf:Class ;
+	rdfs:range rdf:Resource .
+
+ex:mobileOperatingSystem a rdfs:Class ;
+	rdfs:comment "Operating system that operates a mobile device" .
+
+ex:IOS a rdfs:Class ;
+	rdfs:comment "Mobile operating system by Apple" ;
+	rdfs:subClassOf ex:mobileOperatingSystem ;
+	ex:publishDate "29-07-2007" ;
+	ex:developer ex:Apple .
+
+ex:ANDROID a rdfs:Class ;
+	rdfs:comment "Open-source operating system for mobile devices created by Google" ;
+	rdfs:subClassOf ex:mobileOperatingSystem ;
+	ex:developer ex:Google, ex:OpenHandsetAlliance .
+
+# Additional resource
+ex:unit a rdfs:Property ;
+	rdfs:comment "Unit of measurement" ;
+	rdfs:domain rdf:Class ;
+	rdfs:range rdf:Resource .
+
+ex:date a rdfs:Property ;
+	rdfs:comment "Particular day represented within a calendar system in format dd-MM-yyyy" .
+
+ex:dimentionSize a rdfs:Property ;
+	rdfs:comment "The size of something in format (H x L x W)" ;
+	rdfs:domain rdf:Class ;
+	rdfs:range rdf:Resource .
+
+ex:developer a rdfs:Property ;
+	rdfs:comment "Organization or person that developed the item" ;
+	rdfs:domain rdf:Class ;
+	rdfs:range rdf:Resource .
+
+ex:softwareVersionIdentifier a rdfs:Property ;
+	rdfs:comment "Numeric or nominal identifier of a version of a software program or file format, current or past" ;
+	rdfs:domain rdf:Class ;
+	rdfs:range rdf:Resource .
+
+ex:Apple a rdfs:Class ;
+	rdfs:comment "American multinational technology company" . # TODO: https://www.wikidata.org/wiki/Q312

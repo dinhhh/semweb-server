@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex: <http://semweb.edu.vn/example#> .
+
+ex:iphone-7-plus a rdf:Class ;
+	ex:publishDate "07-09-2016" ;
+	ex:status ex:discontinued ;
+	ex:SIM ex:NANO-SIM ;
+
+	ex:bodyDimensions [
+		rdf:value "158.2 x 77.9 x 7.3" ;
+		ex:unit "mm"
+	] ;
+	ex:bodyWeight [
+		rdf:value "188" ;
+		ex:unit "g"
+	] ;
+	ex:bodyBuild "Glass front", "Glass back", "Aluminum frame" ;
+
+	ex:displayType ex:LCD ;
+	ex:displayDimensions [
+		rdf:value "1080 x 1920" ;
+		ex:unit "pixel"
+	] ;
+	ex:displayProtection "Ion-strengthened glass" ;
+
+	ex:operatingSystem ex:IOS .
