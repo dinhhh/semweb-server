@@ -276,3 +276,248 @@ ex:iphone-8 a rdf:Class ;
 	ex:selfieCameraResolution "7 MP" ;
 	ex:selfieCameraFeatures "HDR" ;
 	ex:selfieCameraVideo "1080p@30fps" .
+
+# samsung
+ex:samsung-galaxy-a14-5g a rdf:Class ;
+	rdfs:subClassOf ex:mobilePhone ;
+	ex:name "Samsung Galaxy A14 5G" ;
+	ex:publishDate "12-01-2023" ;
+	ex:status ex:available ;
+	ex:SIM ex:NANO-SIM ;
+	ex:bodyDimensions "167.7 x 78 x 9.1 mm" ;
+	ex:bodyWeight "202 g" ;
+	ex:bodyBuild "Glass front", "Plastic back", "Plastic frame" ;
+	ex:displayType ex:PLS-LCD ;
+	ex:displayDimensions "1080 x 2408 pixel" ;
+	ex:operatingSystem ex:Android ; #Android 13, One UI Core 5
+	ex:chipset ex:Exynos1330, ex:MediatekDimensity700 ;
+	ex:CPU "Octa-core (2x2.4 GHz & 6x2.0 GHz) - SM-A146B", "Octa-core (2x2.2 GHz Cortex-A76 & 6x2.0 GHz Cortex-A55) - SM-A146P" ;
+	ex:GPU "Mali-G68 MC4 - SM-A146B", "Mali-G57 MC2 - SM-A146P" ;
+	ex:cardSlot "microSDXC (dedicated slot)" ;
+	ex:ramMemory "4 GB", "6 GB";
+	ex:internalMemory "64 GB" , "128 GB" ;
+	ex:mainCameraResolution "50 MP (wide)", "2 MP (macro)", "2 MP (depth)" ;
+	ex:mainCameraFeatures "LED flash", "panorama", "HDR" ;
+	ex:mainCameraVideo "1080p@30fps" ;
+	ex:selfieCameraResolution "13 MP" ;
+	ex:selfieCameraVideo "1080p@30fps" .
+
+ex:samsung-galaxy-f04 a rdf:Class ;
+	rdfs:subClassOf ex:mobilePhone ;
+	ex:name "Samsung Galaxy F04" ;
+	ex:publishDate "12-01-2023" ;
+	ex:status ex:available ;
+	ex:SIM ex:NANO-SIM ;
+	ex:bodyDimensions "164.2 x 75.9 x 9.1 mm" ;
+	ex:bodyWeight "188 g" ;
+	ex:bodyBuild "Glass front", "Plastic back", "Plastic frame" ;
+	ex:displayType ex:PLS-LCD ;
+	ex:displayDimensions "720 x 1600 pixel" ;
+	ex:operatingSystem ex:Android ; #Android 12, One UI
+	ex:chipset ex:MediatekHelioP35 ;
+	ex:CPU "Octa-core (4x2.35 GHz Cortex-A53 & 4x1.8 GHz Cortex-A53)" ;
+	ex:GPU "PowerVR GE8320" ;
+	ex:cardSlot "microSDXC (dedicated slot)" ;
+	ex:ramMemory "4GB" ;
+	ex:internalMemory "64GB" ;
+	ex:mainCameraResolution "13 MP (wide)", "2 MP (depth)" ;
+	ex:mainCameraFeatures "LED flash";
+	ex:mainCameraVideo "1080p@30fps" ;
+	ex:selfieCameraResolution "5 MP" ;
+	ex:selfieCameraVideo "Yes" .
+
+ex:samsung-galaxy-m04 a rdf:Class ;
+	rdfs:subClassOf ex:mobilePhone ;
+	ex:name "Samsung Galaxy M04" ;
+	ex:publishDate "16-12-2022" ;
+	ex:status ex:available ;
+	ex:SIM ex:NANO-SIM ;
+	ex:bodyDimensions "164.2 x 75.9 x 9.1 mm" ;
+	ex:bodyWeight "188 g" ;
+	ex:bodyBuild "Glass front", "Plastic back", "Plastic frame" ;
+	ex:displayType ex:PLS-LCD ;
+	ex:displayDimensions "720 x 1600 pixel" ;
+	ex:operatingSystem ex:Android ; #Android 12, One UI Core 4.1
+	ex:chipset ex:MediatekHelioP35 ;
+	ex:CPU "Octa-core (4x2.35 GHz Cortex-A53 & 4x1.8 GHz Cortex-A53)" ;
+	ex:GPU "PowerVR GE8320" ;
+	ex:cardSlot "microSDXC (dedicated slot)" ;
+	ex:ramMemory "4GB" ;
+	ex:internalMemory "64GB", "128MB";
+	ex:mainCameraResolution "13 MP (wide)", "2 MP (depth)" ;
+	ex:mainCameraFeatures "LED flash";
+	ex:mainCameraVideo "1080p@30fps" ;
+	ex:selfieCameraResolution "5 MP" ;
+	ex:selfieCameraVideo "Yes" .
+
+ex:samsung-galaxy-s22-ultra-5G a rdf:Class ;
+	rdfs:subClassOf ex:mobilePhone ;
+	ex:name "Samsung Galaxy S22 Ultra 5G" ;
+	ex:publishDate "25-02-2022" ;
+	ex:status ex:available ;
+	ex:SIM ex:NANO-SIM, ex:E-SIM ;
+	ex:bodyDimensions "163.3 x 77.9 x 8.9 mm" ;
+	ex:bodyWeight "228 g" ;
+	ex:bodyBuild "Glass front (Gorilla Glass Victus+)", "Glass back (Gorilla Glass Victus+)", "Aluminum frame" ;
+	ex:displayType ex:DynamicAMOLED2X ;
+	ex:displayDimensions "1440 x 3088 pixel" ;
+	ex:displayProtection "Corning Gorilla Glass Victus+", "Always-on display" ;
+	ex:operatingSystem ex:Android ; #Android 12, upgradable to Android 13, One UI 5
+	ex:chipset ex:Exynos2200, ex:QualcommSnapdragon8Gen1 ;
+	ex:CPU "Octa-core (1x2.8 GHz Cortex-X2 & 3x2.50 GHz Cortex-A710 & 4x1.8 GHz Cortex-A510)", "Octa-core (1x3.00 GHz Cortex-X2 & 3x2.50 GHz Cortex-A710 & 4x1.80 GHz Cortex-A510)" ;
+	ex:GPU "Xclipse 920", "Adreno 730" ;
+	ex:cardSlot "No" ;
+	ex:ramMemory "8GB", "12GB" ;
+	ex:internalMemory "128GB", "256GB", "512GB", "1TB" ;
+	ex:mainCameraResolution "108 MP (wide)", "10 MP (periscope telephoto)", "10 MP (telephoto)", "12 MP (ultrawide)" ;
+	ex:mainCameraFeatures "LED flash", "auto-HDR", "panorama" ;
+	ex:mainCameraVideo "8K@24fps", "4K@30/60fps", "1080p@30/60/240fps", "720p@960fps" ;
+	ex:selfieCameraResolution "40 MP" ;
+	ex:selfieCameraFeatures "Dual video call", "Auto-HDR" ;
+	ex:selfieCameraVideo "4K@30/60fps", "1080p@30fps" .
+
+ex:oppo-a78 a rdf:Class ;
+	rdfs:subClassOf ex:mobilePhone ;
+	ex:name "Oppo A78" ;
+	ex:publishDate "07-01-2023" ;
+	ex:status ex:available ;
+	ex:SIM ex:NANO-SIM ;
+	ex:bodyDimensions "163.8 x 75.1 x 8 mm" ;
+	ex:bodyWeight "188 g" ;
+	ex:displayType ex:IPS-LCD ;
+	ex:displayDimensions "720 x 1612 pixel" ;
+	ex:displayProtection "Panda glass" ;
+	ex:operatingSystem ex:Android ; #Android 12, ColorOS 13
+	ex:chipset ex:MediatekDimensity700 ;
+	ex:CPU "Octa-core (2x2.2 GHz Cortex-A76 & 6x2.0 GHz Cortex-A55)" ;
+	ex:GPU "Mali-G57 MC2" ;
+	ex:cardSlot "microSDXC" ;
+	ex:ramMemory "8GB" ;
+	ex:internalMemory "128GB" ;
+	ex:mainCameraResolution "50 MP (wide)", "2 MP (depth)" ;
+	ex:mainCameraFeatures "LED flash", "HDR", "panorama" ;
+	ex:mainCameraVideo "1080p@30fps" ;
+	ex:selfieCameraResolution "8 MP" ;
+	ex:selfieCameraVideo "1080p@30fps" .
+
+ex:oppo-reno8-pro a rdf:Class ;
+	rdfs:subClassOf ex:mobilePhone ;
+	ex:name "Oppo Reno8 Pro" ;
+	ex:publishDate "19-07-2022" ;
+	ex:status ex:available ;
+	ex:SIM ex:NANO-SIM ;
+	ex:bodyDimensions "161.2 x 74.2 x 7.3 mm" ;
+	ex:bodyWeight "183 g" ;
+	ex:bodyBuild "Glass front (Gorilla Glass 5)", "Aluminum frame", "Glass back" ;
+	ex:displayType ex:AMOLED ;
+	ex:displayDimensions "1080 x 2412 pixel" ;
+	ex:displayProtection "Corning Gorilla Glass 5" ;
+	ex:operatingSystem ex:Android ; #Android 12, ColorOS 12.1
+	ex:chipset ex:MediatekDimensity8100-Max ;
+	ex:CPU "Octa-core (4x2.85 GHz Cortex-A78 & 4x2.0 GHz Cortex-A55)" ;
+	ex:GPU "Mali-G610 MC6" ;
+	ex:cardSlot "No" ;
+	ex:ramMemory "8GB", "12GB" ;
+	ex:internalMemory "256GB" ;
+	ex:mainCameraResolution "50 MP (wide)", "8 MP (ultrawide)", "2 MP (macro)" ;
+	ex:mainCameraFeatures "LED flash", "HDR", "panorama" ;
+	ex:mainCameraVideo "4K@30fps", "1080p@30/60/120/240fps", "720p@960fps" ;
+	ex:selfieCameraResolution "32 MP" ;
+	ex:selfieCameraFeatures "Panorama", "HDR" ;
+	ex:selfieCameraVideo "1080p@30fps" .
+
+ex:xiaomi-redmi-note-12 a rdf:Class ;
+	rdfs:subClassOf ex:mobilePhone ;
+	ex:name "Xiaomi Redmi Note 12" ;
+	ex:publishDate "11-01-2023" ;
+	ex:status ex:available ;
+	ex:SIM ex:NANO-SIM ;
+	ex:bodyDimensions "165.9 x 76.2 x 8 mm" ;
+	ex:bodyWeight "188 g" ;
+	ex:displayType ex:AMOLED ;
+	ex:displayDimensions "1080 x 2400 pixel" ;
+	ex:displayProtection "Corning Gorilla Glass 3" ;
+	ex:operatingSystem ex:Android ; #Android 12, MIUI 13
+	ex:chipset ex:QualcommSnapdragon4Gen1 ;
+	ex:CPU "Octa-core (2x2.0 GHz Cortex-A78 & 6x1.8 GHz Cortex-A55)" ;
+	ex:GPU "Adreno 619" ;
+	ex:cardSlot "microSDXC (uses shared SIM slot)" ;
+	ex:ramMemory "4GB", "6GB" ;
+	ex:internalMemory "128GB" ;
+	ex:mainCameraResolution "48 MP (wide)", "8 MP (ultrawide)", "2 MP (macro)" ;
+	ex:mainCameraFeatures "Dual-LED dual-tone flash", "HDR", "panorama" ;
+	ex:mainCameraVideo "4K@30fps", "1080p@30/60/120/240fps", "720p@960fps" ;
+	ex:selfieCameraResolution "13 MP" ;
+	ex:selfieCameraFeatures "HDR" ;
+	ex:selfieCameraVideo "1080p@30fps" .
+
+ex:xiaomi-poco-c50 a rdf:Class ;
+	rdfs:subClassOf ex:mobilePhone ;
+	ex:name "Xiaomi Poco C50" ;
+	ex:publishDate "10-01-2023" ;
+	ex:status ex:available ;
+	ex:SIM ex:NANO-SIM ;
+	ex:bodyDimensions "164.9 x 76.8 x 9.1 mm" ;
+	ex:bodyWeight "192 g" ;
+	ex:displayType ex:IPS-LCD ;
+	ex:displayDimensions "720 x 1600 pixel" ;
+	ex:operatingSystem ex:Android ; #Android 12 (Go edition)
+	ex:chipset ex:MediatekHelioA22 ;
+	ex:CPU "Quad-core 2.0 GHz Cortex-A53" ;
+	ex:GPU "PowerVR GE8320" ;
+	ex:cardSlot "microSDXC (dedicated slot)" ;
+	ex:ramMemory "2GB", "3GB" ;
+	ex:internalMemory "32GB" ;
+	ex:mainCameraResolution "8 MP (wide)", "0.08 MP (depth)" ;
+	ex:mainCameraFeatures "Dual-LED flash", "HDR" ;
+	ex:mainCameraVideo "1080p@30fps" ;
+	ex:selfieCameraResolution "5 MP" ;
+	ex:selfieCameraVideo "1080p@30fps" .
+
+ex:realme-10-pro a rdf:Class ;
+	rdfs:subClassOf ex:mobilePhone ;
+	ex:name "Realme 10 Pro" ;
+	ex:publishDate "24-11-2022" ;
+	ex:status ex:available ;
+	ex:SIM ex:NANO-SIM ;
+	ex:bodyDimensions "163.7 x 74.2 x 8.1 mm" ;
+	ex:bodyWeight "190 g" ;
+	ex:displayType ex:IPS-LCD ;
+	ex:displayDimensions "1080 x 2400 pixel" ;
+	ex:operatingSystem ex:Android ; #Android 13, Realme UI 4.
+	ex:chipset ex:QualcommSnapdragon695-5G ;
+	ex:CPU "Octa-core (2x2.2 GHz Kryo 660 Gold & 6x1.8 GHz Kryo 660 Silver)" ;
+	ex:GPU "Adreno 619" ;
+	ex:cardSlot "microSDXC (uses shared SIM slot)" ;
+	ex:ramMemory "6GB", "8GB", "12GB" ;
+	ex:internalMemory "128GB", "256GB" ;
+	ex:mainCameraResolution "108 MP (wide)", "2 MP (depth)" ;
+	ex:mainCameraFeatures "LED flash", "HDR", "panorama" ;
+	ex:mainCameraVideo "1080p@30fps" ;
+	ex:selfieCameraResolution "16 MP" ;
+	ex:selfieCameraFeatures "Panorama" ;
+	ex:selfieCameraVideo "1080p@30fps" .
+
+ex:vivo-Y22 a rdf:Class ;
+	rdfs:subClassOf ex:mobilePhone ;
+	ex:name "vivo Y22" ;
+	ex:publishDate "05-09-2022" ;
+	ex:status ex:available ;
+	ex:SIM ex:NANO-SIM ;
+	ex:bodyDimensions "164.3 x 76.1 x 8.4 mm" ;
+	ex:bodyWeight "190 g" ;
+	ex:bodyBuild "Glass front", "Plastic frame", "Plastic back" ;
+	ex:displayType ex:IPS-LCD ;
+	ex:displayDimensions "720 x 1612 pixel" ;
+	ex:operatingSystem ex:Android ; #Android 12, Funtouch 12
+	ex:chipset ex:MediatekHelioG85 ;
+	ex:CPU "Octa-core (2x2.0 GHz Cortex-A75 & 6x1.8 GHz Cortex-A55)" ;
+	ex:GPU "Mali-G52 MC2" ;
+	ex:cardSlot "microSDXC (dedicated slot)" ;
+	ex:ramMemory "4GB", "6GB" ;
+	ex:internalMemory "128GB", "64GB" ;
+	ex:mainCameraResolution "50 MP (wide)", "2 MP (macro)" ;
+	ex:mainCameraFeatures "Dual-LED flash", "panorama" ;
+	ex:mainCameraVideo "1080p@30fps" ;
+	ex:selfieCameraResolution "8 MP" ;
+	ex:selfieCameraVideo "1080p@30fps" .
