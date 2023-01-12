@@ -3,25 +3,32 @@
 @prefix ex: <http://semweb.edu.vn/example#> .
 
 ex:iphone-7-plus a rdf:Class ;
+	rdfs:subClassOf ex:mobilePhone ;
 	ex:publishDate "07-09-2016" ;
 	ex:status ex:discontinued ;
 	ex:SIM ex:NANO-SIM ;
 
-	ex:bodyDimensions [
-		rdf:value "158.2 x 77.9 x 7.3" ;
-		ex:unit "mm"
-	] ;
-	ex:bodyWeight [
-		rdf:value "188" ;
-		ex:unit "g"
-	] ;
+	ex:bodyDimensions "158.2 x 77.9 x 7.3 mm" ;
+	ex:bodyWeight "188 g" ;
 	ex:bodyBuild "Glass front", "Glass back", "Aluminum frame" ;
 
 	ex:displayType ex:LCD ;
-	ex:displayDimensions [
-		rdf:value "1080 x 1920" ;
-		ex:unit "pixel"
-	] ;
+	ex:displayDimensions "1080 x 1920 pixel" ;
 	ex:displayProtection "Ion-strengthened glass" ;
 
-	ex:operatingSystem ex:IOS .
+	ex:operatingSystem ex:IOS ;
+	ex:chipset ex:appleA10Fusion ;
+	ex:CPU "Quad-core 2.34 GHz (2x Hurricane + 2x Zephyr)" ;
+	ex:cardSlot "No" ;
+	ex:memory [
+		ex:internalMemory "32GB" ;
+		ex:ramMemory "3 GB"
+	] ;
+	ex:memory [
+		ex:internalMemory "128GB" ;
+		ex:ramMemory "3 GB"
+	] ;
+	ex:memory [
+		ex:internalMemory "256GB" ;
+		ex:ramMemory "3 GB"
+	] .

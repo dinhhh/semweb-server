@@ -32,28 +32,27 @@ ex:status a rdfs:Property ;
 
 # Status classes
 ex:phoneStatus a rdfs:Class ;
-	rdfs:comment "The stage of a phone within its life cycle" ;
-	rdfs:subClassOf ex:status .
+	rdfs:comment "The stage of a phone within its life cycle" .
 
 ex:rumored a rdfs:Class ;
 	rdfs:comment "Not yet officially announced or even confirmed for market release yet" ;
-	rdfs:subClassOf ex:status .
+	rdfs:subClassOf ex:phoneStatus .
 
 ex:commingSoon a rdfs:Class ;
 	rdfs:comment "Officially announced, but not yet available to buy in stores or online" ;
-	rdfs:subClassOf ex:status .
+	rdfs:subClassOf ex:phoneStatus .
 
 ex:cancelled a rdfs:Class ;
 	rdfs:comment "Officially announced, then officially cancelled. Rarely happens" ;
-	rdfs:subClassOf ex:status .
+	rdfs:subClassOf ex:phoneStatus .
 
 ex:available a rdfs:Class ;
 	rdfs:comment "In production, can be found new in stores and online" ;
-	rdfs:subClassOf ex:status .
+	rdfs:subClassOf ex:phoneStatus .
 
 ex:discontinued a rdfs:Class ;
 	rdfs:comment "No longer in production, can usually be found pre-owned online" ;
-	rdfs:subClassOf ex:status .
+	rdfs:subClassOf ex:phoneStatus .
 
 # Body
 ex:bodyDimensions a rdfs:Property ;
@@ -178,6 +177,49 @@ ex:ANDROID a rdfs:Class ;
 	rdfs:subClassOf ex:mobileOperatingSystem ;
 	ex:developer ex:Google, ex:OpenHandsetAlliance .
 
+# Platform chipset information
+ex:chipset a rdfs:Property ;
+	rdfs:comment "Mobile phones run on so-called embedded chipsets, which are designed to perform one or a few dedicated functions, often with real-time computing constraints" ;
+	rdfs:domain rdf:Class ;
+	rdfs:range rdf:Resource .
+
+ex:chipsetClass a rdfs:Class ;
+	rdfs:comment "type of integrated circuit; integration of the functions of a system on a chip" .
+
+ex:appleA10Fusion a rdfs:Class ;
+	rdfs:subClassOf ex:chipsetClass ;
+	rdfs:comment "system on a chip (SoC) designed by Apple Inc." ;
+	ex:publishDate "07-09-2016" ;
+	ex:developer ex:Apple ;
+	ex:clockFrequency "2.34 gigahertz" .
+
+ex:appleA11Fusion a rdfs:Class ;
+	rdfs:subClassOf ex:chipsetClass ;
+	rdfs:comment "system on a chip (SoC) designed by Apple Inc." ;
+	ex:developer ex:Apple .
+
+# Platform CPU
+ex:CPU a rdfs:Property ;
+	rdfs:comment "CPU (Central Processing Unit) - otherwise known as a processor - is an electronic circuit that can execute computer programs" ;
+	rdfs:domain rdf:Class ;
+	rdfs:range rdf:Resource .
+
+# Platform GPU
+ex:GPU a rdfs:Property ;
+	rdfs:comment "The GPU (Graphics Processing Unit) is a specialized circuit designed to accelerate the image output in a frame buffer intended for output to a display" ;
+	rdfs:domain rdf:Class ;
+	rdfs:range rdf:Resource .
+
+# Memory
+ex:cardSlot a rdfs:Property ;
+	rdfs:comment "A special slot for inserting a memory card" .
+
+ex:internalMemory a rdfs:Property ;
+	rdfs:comment "A way or organizing different types of data in the phone's memory. Also referred to as Shared memory" .
+
+ex:ramMemory a rdfs:Property ;
+	rdfs:comment "Random Access Memory" .
+
 # Additional resource
 ex:unit a rdfs:Property ;
 	rdfs:comment "Unit of measurement" ;
@@ -186,6 +228,15 @@ ex:unit a rdfs:Property ;
 
 ex:date a rdfs:Property ;
 	rdfs:comment "Particular day represented within a calendar system in format dd-MM-yyyy" .
+
+ex:foundedBy a rdfs:Property ;
+	rdfs:comment "founder or co-founder of this organization, religion or place" .
+
+ex:SergeyBrin a rdfs:Class ;
+	rdfs:comment "American computer scientist and Internet entrepreneur" .
+
+ex:LarryPage a rdfs:Class ;
+	rdfs:comment "American computer scientist and Internet entrepreneur" .
 
 ex:dimentionSize a rdfs:Property ;
 	rdfs:comment "The size of something in format (H x L x W)" ;
@@ -197,6 +248,11 @@ ex:developer a rdfs:Property ;
 	rdfs:domain rdf:Class ;
 	rdfs:range rdf:Resource .
 
+ex:clockFrequency a rdfs:Property ;
+	rdfs:comment "CPU's specified clock frequency (use with determination method = Q73207925 or Q73208059 as appropriate)" ;
+	rdfs:domain rdf:Class ;
+	rdfs:range rdf:Resource .
+
 ex:softwareVersionIdentifier a rdfs:Property ;
 	rdfs:comment "Numeric or nominal identifier of a version of a software program or file format, current or past" ;
 	rdfs:domain rdf:Class ;
@@ -204,3 +260,7 @@ ex:softwareVersionIdentifier a rdfs:Property ;
 
 ex:Apple a rdfs:Class ;
 	rdfs:comment "American multinational technology company" . # TODO: https://www.wikidata.org/wiki/Q312
+
+ex:Google a rdfs:Class ;
+	rdfs:comment "American multinational technology company" ;
+	ex:foundedBy "Sergey Brin", "Larry Page" . # TODO: https://www.wikidata.org/wiki/Q95

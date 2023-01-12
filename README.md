@@ -1,5 +1,8 @@
 # Cách chạy Fuseki
-./fuseki-server --file=/home/dinh/Documents/HUST/20221/semantic-web/rdf/mobile-phone/abox-mobile-phone.ttl --file=/home/dinh/Documents/HUST/20221/semantic-web/rdf/mobile-phone/tbox-mobile-phone.ttl /name
+
+```agsl
+./fuseki-server --file=path_to_this_project/src/main/resources/static/rdfs/abox-mobile-phone.ttl --file=path_to_this_project/src/main/resources/static/rdfs/tbox-mobile-phone.ttl /name
+```
 
 # Suy diễn sử dụng Apache Jena
 1. Xác định phân khúc điện thoại
