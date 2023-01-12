@@ -220,6 +220,26 @@ ex:internalMemory a rdfs:Property ;
 ex:ramMemory a rdfs:Property ;
 	rdfs:comment "Random Access Memory" .
 
+# Main Camera
+ex:mainCameraResolution a rdfs:Property ;
+	rdfs:comment "Total amount of pixels that main camera capture" .
+
+ex:mainCameraFeatures a rdfs:Property ;
+	rdfs:comment "The technology of main camera" .
+
+ex:mainCameraVideo a rdfs:Property ;
+	rdfs:comment "The video resolution and Frame Per Second that main camera can take" .
+
+# Selfie Camera
+ex:selfieCameraResolution a rdfs:Property ;
+	rdfs:comment "Total amount of pixels that selfie camera capture" .
+
+ex:selfieCameraFeatures a rdfs:Property ;
+	rdfs:comment "The technology of selfie camera" .
+
+ex:selfieCameraVideo a rdfs:Property ;
+	rdfs:comment "The video resolution and Frame Per Second that selfie camera can take" .
+
 # Additional resource
 ex:unit a rdfs:Property ;
 	rdfs:comment "Unit of measurement" ;

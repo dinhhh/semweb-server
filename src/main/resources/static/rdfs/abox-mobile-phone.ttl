@@ -20,15 +20,11 @@ ex:iphone-7-plus a rdf:Class ;
 	ex:chipset ex:appleA10Fusion ;
 	ex:CPU "Quad-core 2.34 GHz (2x Hurricane + 2x Zephyr)" ;
 	ex:cardSlot "No" ;
-	ex:memory [
-		ex:internalMemory "32GB" ;
-		ex:ramMemory "3 GB"
-	] ;
-	ex:memory [
-		ex:internalMemory "128GB" ;
-		ex:ramMemory "3 GB"
-	] ;
-	ex:memory [
-		ex:internalMemory "256GB" ;
-		ex:ramMemory "3 GB"
-	] .
+	ex:ramMemory "3 GB";
+	ex:internalMemory "32 GB" , "128 GB" , "256 GB" ;
+	ex:mainCameraResolution "12 MP" ;
+	ex:mainCameraFeatures "Quad-LED dual-tone flash" , "HDR" ;
+	ex:mainCameraVideo "4K@30fps" , "1080p@30/60/120fps" , "720p@240fps" ;
+	ex:selfieCameraResolution "7 MP" ;
+	ex:selfieCameraFeatures "Face detection" , "HDR" ;
+	ex:selfieCameraVideo "1080p@30fps" .
