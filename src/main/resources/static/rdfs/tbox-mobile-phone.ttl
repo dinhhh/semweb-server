@@ -186,18 +186,6 @@ ex:chipset a rdfs:Property ;
 ex:chipsetClass a rdfs:Class ;
 	rdfs:comment "type of integrated circuit; integration of the functions of a system on a chip" .
 
-ex:appleA10Fusion a rdfs:Class ;
-	rdfs:subClassOf ex:chipsetClass ;
-	rdfs:comment "system on a chip (SoC) designed by Apple Inc." ;
-	ex:publishDate "07-09-2016" ;
-	ex:developer ex:Apple ;
-	ex:clockFrequency "2.34 gigahertz" .
-
-ex:appleA11Fusion a rdfs:Class ;
-	rdfs:subClassOf ex:chipsetClass ;
-	rdfs:comment "system on a chip (SoC) designed by Apple Inc." ;
-	ex:developer ex:Apple .
-
 # Platform CPU
 ex:CPU a rdfs:Property ;
 	rdfs:comment "CPU (Central Processing Unit) - otherwise known as a processor - is an electronic circuit that can execute computer programs" ;
@@ -278,9 +266,15 @@ ex:country a rdfs:Property ;
 ex:name a rdfs:Property ;
 	rdfs:comment "word or phrase used for identification" .
 
+ex:partOf a rdfs:Property ;
+	rdfs:comment "object of which the subject is a part of"
+
 # --------------------------------------CLASS-------------------
 ex:countryClass a rdfs:Class ;
 	rdfs:comment "distinct territorial body or political entity" .
+
+ex:BigTech a rdfs:Class ;
+	rdfs:comment "companies that dominate the World Wide Web" .
 
 ex:USA a rdfs:Class ;
 	rdfs:subClassOf ex:countryClass ;
@@ -292,10 +286,49 @@ ex:Apple a rdfs:Class ;
 ex:Google a rdfs:Class ;
 	rdfs:comment "American multinational technology company" ;
 	ex:foundedBy ex:SergeyBrin , ex:LarryPage ;
-	ex:country ex:USA . # TODO: https://www.wikidata.org/wiki/Q95
+	ex:country ex:USA ;
+	ex:partOf ex:BigTech . # TODO: https://www.wikidata.org/wiki/Q95
 
 ex:SergeyBrin a rdfs:Class ;
 	rdfs:comment "American computer scientist and Internet entrepreneur" .
 
 ex:LarryPage a rdfs:Class ;
 	rdfs:comment "American computer scientist and Internet entrepreneur" .
+
+# chip set
+ex:appleA10Fusion a rdfs:Class ;
+	rdfs:subClassOf ex:chipsetClass ;
+	rdfs:comment "system on a chip (SoC) designed by Apple Inc." ;
+	ex:publishDate "07-09-2016" ;
+	ex:developer ex:Apple ;
+	ex:clockFrequency "2.34 gigahertz" .
+
+ex:appleA11Fusion a rdfs:Class ;
+	rdfs:subClassOf ex:chipsetClass ;
+	rdfs:comment "system on a chip (SoC) designed by Apple Inc." ;
+	ex:developer ex:Apple .
+
+ex:AppleA16Bionic a rdfs:Class ;
+	rdfs:subClassOf ex:chipsetClass ;
+	rdfs:comment "system on a chip (SoC) designed by Apple Inc." ;
+	ex:publishDate "07-09-2022" ;
+	ex:developer ex:Apple ;
+	ex:clockFrequency "3.46 gigahertz" .
+
+ex:AppleA15Bionic a rdfs:Class ;
+	rdfs:subClassOf ex:chipsetClass ;
+	rdfs:comment "system on a chip (SoC) designed by Apple Inc." ;
+	ex:publishDate "07-09-2022" ;
+	ex:developer ex:Apple .
+
+ex:AppleA14Bionic a rdfs:Class ;
+	rdfs:subClassOf ex:chipsetClass ;
+	rdfs:comment "system on a chip (SoC) designed by Apple Inc." ;
+	ex:publishDate "15-11-2020" ;
+	ex:developer ex:Apple .
+
+ex:AppleA11Bionic a rdfs:Class ;
+	rdfs:subClassOf ex:chipsetClass ;
+	rdfs:comment "system on a chip (SoC) designed by Apple Inc." ;
+	ex:publishDate "12-12-2017" ;
+	ex:developer ex:Apple .
