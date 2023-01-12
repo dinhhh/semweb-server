@@ -252,12 +252,6 @@ ex:date a rdfs:Property ;
 ex:foundedBy a rdfs:Property ;
 	rdfs:comment "founder or co-founder of this organization, religion or place" .
 
-ex:SergeyBrin a rdfs:Class ;
-	rdfs:comment "American computer scientist and Internet entrepreneur" .
-
-ex:LarryPage a rdfs:Class ;
-	rdfs:comment "American computer scientist and Internet entrepreneur" .
-
 ex:dimentionSize a rdfs:Property ;
 	rdfs:comment "The size of something in format (H x L x W)" ;
 	rdfs:domain rdf:Class ;
@@ -278,9 +272,30 @@ ex:softwareVersionIdentifier a rdfs:Property ;
 	rdfs:domain rdf:Class ;
 	rdfs:range rdf:Resource .
 
+ex:country a rdfs:Property ;
+	rdfs:comment "sovereign state that this item is in (not to be used for human beings)" .
+
+ex:name a rdfs:Property ;
+	rdfs:comment "word or phrase used for identification" .
+
+# --------------------------------------CLASS-------------------
+ex:countryClass a rdfs:Class ;
+	rdfs:comment "distinct territorial body or political entity" .
+
+ex:USA a rdfs:Class ;
+	rdfs:subClassOf ex:countryClass ;
+	rdfs:comment "country in North America" .
+
 ex:Apple a rdfs:Class ;
 	rdfs:comment "American multinational technology company" . # TODO: https://www.wikidata.org/wiki/Q312
 
 ex:Google a rdfs:Class ;
 	rdfs:comment "American multinational technology company" ;
-	ex:foundedBy "Sergey Brin", "Larry Page" . # TODO: https://www.wikidata.org/wiki/Q95
+	ex:foundedBy ex:SergeyBrin , ex:LarryPage ;
+	ex:country ex:USA . # TODO: https://www.wikidata.org/wiki/Q95
+
+ex:SergeyBrin a rdfs:Class ;
+	rdfs:comment "American computer scientist and Internet entrepreneur" .
+
+ex:LarryPage a rdfs:Class ;
+	rdfs:comment "American computer scientist and Internet entrepreneur" .

@@ -4,18 +4,16 @@
 
 ex:iphone-7-plus a rdf:Class ;
 	rdfs:subClassOf ex:mobilePhone ;
+	ex:name "Iphone 7 plus" ;
 	ex:publishDate "07-09-2016" ;
 	ex:status ex:discontinued ;
 	ex:SIM ex:NANO-SIM ;
-
 	ex:bodyDimensions "158.2 x 77.9 x 7.3 mm" ;
 	ex:bodyWeight "188 g" ;
 	ex:bodyBuild "Glass front", "Glass back", "Aluminum frame" ;
-
 	ex:displayType ex:LCD ;
 	ex:displayDimensions "1080 x 1920 pixel" ;
 	ex:displayProtection "Ion-strengthened glass" ;
-
 	ex:operatingSystem ex:IOS ;
 	ex:chipset ex:appleA10Fusion ;
 	ex:CPU "Quad-core 2.34 GHz (2x Hurricane + 2x Zephyr)" ;
@@ -28,3 +26,9 @@ ex:iphone-7-plus a rdf:Class ;
 	ex:selfieCameraResolution "7 MP" ;
 	ex:selfieCameraFeatures "Face detection" , "HDR" ;
 	ex:selfieCameraVideo "1080p@30fps" .
+
+ex:iphone-8 a rdf:Class ;
+	rdfs:subClassOf ex:mobilePhone ;
+	ex:name "Iphone 8" ;
+	ex:publishDate "07-09-2018" ;
+	ex:status ex:discontinued .
