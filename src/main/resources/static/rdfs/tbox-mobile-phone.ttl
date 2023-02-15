@@ -22,10 +22,12 @@ ex:mobilePhone a owl:Class ;
 
 # Lauch
 ex:publishDate a rdfs:Property ;
+	ex:label "Publish date" ;
 	rdfs:subPropertyOf ex:date ;
 	rdfs:comment "Date when a work was first published or released" .
 
 ex:status a rdfs:Property ;
+	ex:label "Status" ;
 	rdfs:comment "The property for status classes" ;
 	rdfs:domain rdf:Class ;
 	rdfs:range rdfs:Resource . # Dùng OWL để giới hạn các giá trị ex:status có thể nhận (owl:allValuesFrom)
@@ -35,52 +37,63 @@ ex:phoneStatus a rdfs:Class ;
 	rdfs:comment "The stage of a phone within its life cycle" .
 
 ex:rumored a rdfs:Class ;
+	ex:label "Rumored" ;
 	rdfs:comment "Not yet officially announced or even confirmed for market release yet" ;
 	rdfs:subClassOf ex:phoneStatus .
 
 ex:commingSoon a rdfs:Class ;
+	ex:label "Comming soon" ;
 	rdfs:comment "Officially announced, but not yet available to buy in stores or online" ;
 	rdfs:subClassOf ex:phoneStatus .
 
 ex:cancelled a rdfs:Class ;
+	ex:label "Cancelled" ;
 	rdfs:comment "Officially announced, then officially cancelled. Rarely happens" ;
 	rdfs:subClassOf ex:phoneStatus .
 
 ex:available a rdfs:Class ;
+	ex:label "Available" ;
 	rdfs:comment "In production, can be found new in stores and online" ;
 	rdfs:subClassOf ex:phoneStatus .
 
 ex:discontinued a rdfs:Class ;
+	ex:label "Discontinued" ;
 	rdfs:comment "No longer in production, can usually be found pre-owned online" ;
 	rdfs:subClassOf ex:phoneStatus .
 
 # Body
 ex:bodyDimensions a rdfs:Property ;
+	ex:label "Body dimensions" ;
 	rdfs:subPropertyOf ex:dimentionSize ;
 	rdfs:comment "The size of the phone in format (H x L x W)" ;
 	rdfs:domain rdf:Class ;
 	rdfs:range rdf:Resource .
 
 ex:bodyWeight a rdfs:Property ;
+	ex:label "Body weight" ;
 	rdfs:comment "The weight of the phone" ;
 	rdfs:domain rdf:Class ;
 	rdfs:range rdf:Resource .
 
 ex:bodyBuild a rdfs:Property ;
+	ex:label "Body build" ;
 	rdfs:comment "The construction materials, methods and finishes used by the manufacturer when building a phone" ;
 	rdfs:domain rdf:Class ;
 	rdfs:range rdf:Resource .
 
 # SIM
 ex:SIM a rdfs:Property ;
+	ex:label "SIM" ;
 	rdfs:comment "SIM cards store the required information to identify the mobile device. It also contains data required for voice encryption to make listening in on calls almost impossible" ;
 	rdfs:domain rdf:Class ;
 	rdfs:range rdf:SIMCard .
 
 # SIM card classes
 ex:SIMCard a rdfs:Class ;
+	ex:label "SIM card" ;
 	rdfs:comment "The information of a SIM card" .
 ex:FULL-SIZE-SIM a rdfs:Class ;
+	ex:label "Full-size SIM" ;
 	rdfs:comment "A standard size of SIM card" ;
 	rdfs:subClassOf ex:SIMCard ;
 	rdfs:dimentionSize [
@@ -88,6 +101,7 @@ ex:FULL-SIZE-SIM a rdfs:Class ;
 		ex:unit "mm"
 	] .
 ex:MINI-SIM a rdfs:Class ;
+	ex:label "Mini-SIM" ;
 	rdfs:comment "A standard size of SIM card" ;
 	rdfs:subClassOf ex:SIMCard ;
 	rdfs:dimentionSize [
@@ -95,6 +109,7 @@ ex:MINI-SIM a rdfs:Class ;
 		ex:unit "mm"
 	] .
 ex:MICRO-SIM a rdfs:Class ;
+	ex:label "Micro-SIM" ;
 	rdfs:comment "A standard size of SIM card" ;
 	rdfs:subClassOf ex:SIMCard ;
 	rdfs:dimentionSize [
@@ -102,6 +117,7 @@ ex:MICRO-SIM a rdfs:Class ;
 		ex:unit "mm"
 	] .
 ex:NANO-SIM a rdfs:Class ;
+	ex:label "Nano-SIM" ;
 	rdfs:comment "A standard size of SIM card" ;
 	rdfs:subClassOf ex:SIMCard ;
 	rdfs:dimentionSize [
@@ -109,6 +125,7 @@ ex:NANO-SIM a rdfs:Class ;
 		ex:unit "mm"
 	] .
 ex:E-SIM a rdfs:Class ;
+	ex:label "eSIM" ;
 	rdfs:comment "A non removable SIM card" ;
 	rdfs:subClassOf ex:SIMCard ;
 	rdfs:dimentionSize [
@@ -118,21 +135,25 @@ ex:E-SIM a rdfs:Class ;
 
 # Display
 ex:displayType a rdfs:Property ;
+	ex:label "Display type" ;
 	rdfs:comment "The property for display type classes" ;
 	rdfs:domain rdf:Class ;
 	rdfs:range rdf:phoneDisplayType .
 
 ex:displaySize a rdfs:Property ;
+	ex:label "Display size" ;
 	rdfs:comment "The size of phone screen in inch" ;
 	rdfs:domain rdf:Class ;
 	rdfs:range rdf:Resource .
 
 ex:displayResolution a rdfs:Property ;
+	ex:label "Display resolution" ;
 	rdfs:comment "The number of pixels on a display" ;
 	rdfs:domain rdf:Class ;
 	rdfs:range rdf:Resource .
 
 ex:displayProtection a rdfs:Property ;
+	ex:label "Display protection" ;
 	rdfs:comment "The technology that need for enhanced scratch resistance and protection of the screens" ;
 	rdfs:domain rdf:Class ;
 	rdfs:range rdf:Resource .
@@ -142,31 +163,38 @@ ex:phoneDisplayType a rdfs:Class ;
 	rdfs:comment "The type of phone screen" .
 
 ex:LCD a rdfs:Class ;
+	ex:label "LCD" ;
 	rdfs:comment "A display type" ;
 	rdfs:subClassOf ex:phoneDisplayType .
 
 ex:IPS-LCD a rdfs:Class ;
+	ex:label "IPS-LCD" ;
 	rdfs:comment "A display type" ;
 	rdfs:subClassOf ex:phoneDisplayType .
 
 ex:PLS-LCD a rdfs:Class ;
+	ex:label "PLS-LCD" ;
 	rdfs:comment "A display type" ;
 	rdfs:subClassOf ex:phoneDisplayType .
 
 ex:OLED a rdfs:Class ;
+	ex:label "OLED" ;
 	rdfs:comment "A display type" ;
 	rdfs:subClassOf ex:phoneDisplayType .
 
 ex:AMOLED a rdfs:Class ;
+	ex:label "AMOLED" ;
 	rdfs:comment "A display type" ;
 	rdfs:subClassOf ex:phoneDisplayType .
 
 ex:DynamicAMOLED2X a rdfs:Class ;
+	ex:label "DynamicAMOLED2X" ;
 	rdfs:comment "A display type" ;
 	rdfs:subClassOf ex:phoneDisplayType .
 
 # Platform information
 ex:operatingSystem a rdfs:Property ;
+	ex:label "Operating system"
 	rdfs:comment "A base infrastructure software component of a computerized system" ;
 	rdfs:domain rdf:Class ;
 	rdfs:range rdf:Resource .
@@ -174,19 +202,22 @@ ex:operatingSystem a rdfs:Property ;
 ex:mobileOperatingSystem a rdfs:Class ;
 	rdfs:comment "Operating system that operates a mobile device" .
 
-ex:IOS a rdfs:Class ;
+ex:iOS a rdfs:Class ;
+	ex:label "iOS" ;
 	rdfs:comment "Mobile operating system by Apple" ;
 	rdfs:subClassOf ex:mobileOperatingSystem ;
 	ex:publishDate "29-07-2007" ;
 	ex:developer ex:Apple .
 
-ex:ANDROID a rdfs:Class ;
+ex:Android a rdfs:Class ;
+	ex:label "Android" ;
 	rdfs:comment "Open-source operating system for mobile devices created by Google" ;
 	rdfs:subClassOf ex:mobileOperatingSystem ;
 	ex:developer ex:Google, ex:OpenHandsetAlliance .
 
 # Platform chipset information
 ex:chipset a rdfs:Property ;
+	ex:label "Chipset" ;
 	rdfs:comment "Mobile phones run on so-called embedded chipsets, which are designed to perform one or a few dedicated functions, often with real-time computing constraints" ;
 	rdfs:domain rdf:Class ;
 	rdfs:range rdf:Resource .
@@ -196,44 +227,55 @@ ex:chipsetClass a rdfs:Class ;
 
 # Platform CPU
 ex:CPU a rdfs:Property ;
+	ex:label "CPU" ;
 	rdfs:comment "CPU (Central Processing Unit) - otherwise known as a processor - is an electronic circuit that can execute computer programs" ;
 	rdfs:domain rdf:Class ;
 	rdfs:range rdf:Resource .
 
 # Platform GPU
 ex:GPU a rdfs:Property ;
+	ex:label "GPU" ;
 	rdfs:comment "The GPU (Graphics Processing Unit) is a specialized circuit designed to accelerate the image output in a frame buffer intended for output to a display" ;
 	rdfs:domain rdf:Class ;
 	rdfs:range rdf:Resource .
 
 # Memory
 ex:cardSlot a rdfs:Property ;
+	ex:label "Card slot" ;
 	rdfs:comment "A special slot for inserting a memory card" .
 
 ex:internalMemory a rdfs:Property ;
+	ex:label "Internal Memory" ;
 	rdfs:comment "A way or organizing different types of data in the phone's memory. Also referred to as Shared memory" .
 
 ex:ramMemory a rdfs:Property ;
+	ex:label "RAM Memory" ;
 	rdfs:comment "Random Access Memory" .
 
 # Main Camera
 ex:mainCameraResolution a rdfs:Property ;
+	ex:label "Main camera resolution" ;
 	rdfs:comment "Total amount of pixels that main camera capture" .
 
 ex:mainCameraFeatures a rdfs:Property ;
+	ex:label "Main camera features" ;
 	rdfs:comment "The technology of main camera" .
 
 ex:mainCameraVideo a rdfs:Property ;
+	ex:label "Main camera video" ;
 	rdfs:comment "The video resolution and Frame Per Second that main camera can take" .
 
 # Selfie Camera
 ex:selfieCameraResolution a rdfs:Property ;
+	ex:label "Selfie camera resolution" ;
 	rdfs:comment "Total amount of pixels that selfie camera capture" .
 
 ex:selfieCameraFeatures a rdfs:Property ;
+	ex:label "Selfie camera features" ;
 	rdfs:comment "The technology of selfie camera" .
 
 ex:selfieCameraVideo a rdfs:Property ;
+	ex:label "Selfie camera video" ;
 	rdfs:comment "The video resolution and Frame Per Second that selfie camera can take" .
 
 # Additional resource
@@ -246,9 +288,11 @@ ex:date a rdfs:Property ;
 	rdfs:comment "Particular day represented within a calendar system in format dd-MM-yyyy" .
 
 ex:foundedBy a rdfs:Property ;
+	ex:label "Founded by" ;
 	rdfs:comment "founder or co-founder of this organization, religion or place" .
 
 ex:dimentionSize a rdfs:Property ;
+	ex:label "Dimention size" ;
 	rdfs:comment "The size of something in format (H x L x W)" ;
 	rdfs:domain rdf:Class ;
 	rdfs:range rdf:Resource .
@@ -277,6 +321,10 @@ ex:name a rdfs:Property ;
 ex:partOf a rdfs:Property ;
 	rdfs:comment "object of which the subject is a part of" .
 
+ex:manufacturer a rdfs:Property ;
+	ex:label "Manufacturer" ;
+	rdfs:comment "manufacturer or producer of this product" .
+
 # --------------------------------------CLASS-------------------
 ex:countryClass a rdfs:Class ;
 	rdfs:comment "distinct territorial body or political entity" .
@@ -285,36 +333,60 @@ ex:BigTech a rdfs:Class ;
 	rdfs:comment "companies that dominate the World Wide Web" .
 
 ex:USA a rdfs:Class ;
+	ex:label "USA" ;
 	rdfs:subClassOf ex:countryClass ;
 	rdfs:comment "country in North America" .
 
 ex:SouthKorea a rdfs:Class ;
+	ex:label "South Korea" ;
 	rdfs:subClassOf ex:countryClass ;
 	rdfs:comment "country in East Asia" .
 
 ex:Taiwan a rdfs:Class ;
+	ex:label "Taiwan" ;
 	rdfs:subClassOf ex:countryClass ;
 	rdfs:comment "country in East Asia" .
 
 ex:Apple a rdfs:Class ;
+	ex:label "Apple" ;
 	rdfs:comment "American multinational technology company" . # TODO: https://www.wikidata.org/wiki/Q312
 
 ex:Google a rdfs:Class ;
+	ex:label "Google" ;
 	rdfs:comment "American multinational technology company" ;
 	ex:foundedBy ex:SergeyBrin , ex:LarryPage ;
 	ex:country ex:USA ;
 	ex:partOf ex:BigTech . # TODO: https://www.wikidata.org/wiki/Q95
 
 ex:Samsung a rdfs:Class ;
+	ex:label "Samsung" ;
 	rdfs:comment "South Korean multinational electronics corporation" ;
 	ex:foundedBy ex:LeeByung-chul ;
 	ex:country ex:SouthKorea . # TODO: https://www.wikidata.org/wiki/Q20718
 
+ex:Xiaomi a rdfs:Class ;
+	ex:label "Xiaomi" ;
+	rdfs:comment "Chinese electronics company" .
+
+ex:Oppo a rdfs:Class ;
+	ex:label "Oppo" ;
+	rdfs:comment "Chinese consumer electronics manufacturer" .
+
+ex:realme a rdfs:Class ;
+	ex:label "realme" ;
+	rdfs:comment "Chinese Android smartphone and IoT manufacturer" .
+
+ex:Vivo a rdfs:Class ;
+	ex:label "Vivo" ;
+	rdfs:comment "business enterprise" .
+
 ex:MediaTek a rdfs:Class ;
+	ex:label "MediaTek" ;
 	rdfs:comment "Taiwanese semiconductor company" ;
 	ex:country ex:Taiwan . # https://www.wikidata.org/wiki/Q699848
 
 ex:Qualcomm a rdfs:Class ;
+	ex:label "Qualcomm" ;
 	rdfs:comment "American global semiconductor company" ;
 	ex:foundedBy ex:IrwinMJacobs, ex:AndrewViterbi ;
 	ex:country ex:USA . # https://www.wikidata.org/wiki/Q544847
@@ -328,6 +400,7 @@ ex:LarryPage a rdfs:Class ;
 
 # chip set
 ex:appleA10Fusion a rdfs:Class ;
+	ex:label "AppleA10Fusion" ;
 	rdfs:subClassOf ex:chipsetClass ;
 	rdfs:comment "system on a chip (SoC) designed by Apple Inc." ;
 	ex:publishDate "07-09-2016" ;
@@ -335,11 +408,13 @@ ex:appleA10Fusion a rdfs:Class ;
 	ex:clockFrequency "2.34 gigahertz" .
 
 ex:appleA11Fusion a rdfs:Class ;
+	ex:label "AppleA11Fusion" ;
 	rdfs:subClassOf ex:chipsetClass ;
 	rdfs:comment "system on a chip (SoC) designed by Apple Inc." ;
 	ex:developer ex:Apple .
 
 ex:AppleA16Bionic a rdfs:Class ;
+	ex:label "AppleA16Bionic" ;
 	rdfs:subClassOf ex:chipsetClass ;
 	rdfs:comment "system on a chip (SoC) designed by Apple Inc." ;
 	ex:publishDate "07-09-2022" ;
@@ -347,30 +422,35 @@ ex:AppleA16Bionic a rdfs:Class ;
 	ex:clockFrequency "3.46 gigahertz" .
 
 ex:AppleA15Bionic a rdfs:Class ;
+	ex:label "AppleA15Bionic" ;
 	rdfs:subClassOf ex:chipsetClass ;
 	rdfs:comment "system on a chip (SoC) designed by Apple Inc." ;
 	ex:publishDate "07-09-2022" ;
 	ex:developer ex:Apple .
 
 ex:AppleA14Bionic a rdfs:Class ;
+	ex:label "AppleA14Bionic" ;
 	rdfs:subClassOf ex:chipsetClass ;
 	rdfs:comment "system on a chip (SoC) designed by Apple Inc." ;
 	ex:publishDate "15-11-2020" ;
 	ex:developer ex:Apple .
 
 ex:AppleA11Bionic a rdfs:Class ;
+	ex:label "AppleA11Bionic" ;
 	rdfs:subClassOf ex:chipsetClass ;
 	rdfs:comment "system on a chip (SoC) designed by Apple Inc." ;
 	ex:publishDate "12-12-2017" ;
 	ex:developer ex:Apple .
 
 ex:Exynos1330 a rdfs:Class ;
+	ex:label "Exynos1330" ;
 	rdfs:subClassOf ex:chipsetClass ;
 	rdfs:comment "chipset designed by Samsung Electronics Co, Ltd." ;
 	ex:publishDate "10-11-2022" ;
 	ex:developer ex:Samsung .
 
 ex:Exynos2200 a rdfs:Class ;
+	ex:label "Exynos2200" ;
 	rdfs:subClassOf ex:chipsetClass ;
 	rdfs:comment "chipset designed by Samsung Electronics Co, Ltd." ;
 	ex:publishDate "18-1-2022" ;
@@ -378,6 +458,7 @@ ex:Exynos2200 a rdfs:Class ;
 	ex:clockFrequency "2800 MHz" .
 
 ex:MediatekDimensity700 a rdfs:Class ;
+	ex:label "MediatekDimensity700" ;
 	rdfs:subClassOf ex:chipsetClass ;
 	rdfs:comment "system on a chip (SoC) designed by MediaTek Inc." ;
 	ex:publishDate "10-11-2020" ;
@@ -385,12 +466,14 @@ ex:MediatekDimensity700 a rdfs:Class ;
 	ex:clockFrequency "2200 MHz" .
 
 ex:MediatekDimensity8100-Max a rdfs:Class ;
+	ex:label "MediatekDimensity8100 Max" ;
 	rdfs:subClassOf ex:chipsetClass ;
 	rdfs:comment "system on a chip (SoC) designed by MediaTek Inc." ;
 	ex:publishDate "01-03-2022" ;
 	ex:developer ex:MediaTek .
 
 ex:MediaTekHelioA22 a rdfs:Class ;
+	ex:label "MediaTekHelioA22" ;
 	rdfs:subClassOf ex:chipsetClass ;
 	rdfs:comment "system on a chip (SoC) designed by MediaTek Inc." ;
 	ex:publishDate "17-06-2018" ;
@@ -398,6 +481,7 @@ ex:MediaTekHelioA22 a rdfs:Class ;
 	ex:clockFrequency "2000 MHz" .
 
 ex:MediaTekHelioP35 a rdfs:Class ;
+	ex:label "MediaTekHelioP35" ;
 	rdfs:subClassOf ex:chipsetClass ;
 	rdfs:comment "system on a chip (SoC) designed by MediaTek Inc." ;
 	ex:publishDate "25-12-2018" ;
@@ -405,6 +489,7 @@ ex:MediaTekHelioP35 a rdfs:Class ;
 	ex:clockFrequency "2300 MHz" .
 
 ex:MediaTekHelioG85 a rdfs:Class ;
+	ex:label "MediaTekHelioG85" ;
 	rdfs:subClassOf ex:chipsetClass ;
 	rdfs:comment "system on a chip (SoC) designed by MediaTek Inc." ;
 	ex:publishDate "30-03-2020" ;
@@ -412,6 +497,7 @@ ex:MediaTekHelioG85 a rdfs:Class ;
 	ex:clockFrequency "2000 MHz" .
 
 ex:QualcommSnapdragon8Gen1 a rdfs:Class ;
+	ex:label "QualcommSnapdragon8Gen1" ;
 	rdfs:subClassOf ex:chipsetClass ;
 	rdfs:comment "system on a chip (SoC) designed by Qualcomm Inc." ;
 	ex:publishDate "01-12-2021" ;
@@ -419,6 +505,7 @@ ex:QualcommSnapdragon8Gen1 a rdfs:Class ;
 	ex:clockFrequency "3000 MHz" .
 
 ex:QualcommSnapdragon4Gen1 a rdfs:Class ;
+	ex:label "QualcommSnapdragon4Gen1" ;
 	rdfs:subClassOf ex:chipsetClass ;
 	rdfs:comment "system on a chip (SoC) designed by Qualcomm Inc." ;
 	ex:publishDate "06-12-2022" ;
@@ -426,6 +513,7 @@ ex:QualcommSnapdragon4Gen1 a rdfs:Class ;
 	ex:clockFrequency "2000 MHz" .
 
 ex:QualcommSnapdragon695-5G a rdfs:Class ;
+	ex:label "QualcommSnapdragon695 5G" ;
 	rdfs:subClassOf ex:chipsetClass ;
 	rdfs:comment "system on a chip (SoC) designed by Qualcomm Inc." ;
 	ex:publishDate "26-10-2021" ;
