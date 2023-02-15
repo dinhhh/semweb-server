@@ -30,7 +30,7 @@ ex:status a rdfs:Property ;
 	ex:label "Status" ;
 	rdfs:comment "The property for status classes" ;
 	rdfs:domain rdf:Class ;
-	rdfs:range rdfs:Resource . # Dùng OWL để giới hạn các giá trị ex:status có thể nhận (owl:allValuesFrom)
+	rdfs:range rdfs:Resource . 
 
 # Status classes
 ex:phoneStatus a rdfs:Class ;
